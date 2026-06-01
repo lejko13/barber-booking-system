@@ -1,4 +1,13 @@
 import { useEffect, useState } from "react";
+
+
+
+
+
+import { useNavigate } from "react-router-dom";
+
+
+
 import { supabase } from "../supabaseClient";
 import { Link } from "react-router-dom";
 import { useApp } from "../context/AppProvider";
@@ -45,6 +54,7 @@ function timeToMinutes(time) {
 }
 
 export default function Admin() {
+  const navigate = useNavigate();
   const { showToast } = useToast();
   const { bookings, loadBookings } = useApp();
 
@@ -252,6 +262,37 @@ function openDeleteModal(item) {
     loadBookings();
     loadAvailability();
   }, []);
+
+
+  const [checkingAuth, setCheckingAuth] = useState(true);
+
+
+
+
+useEffect(() => {
+  async function checkAuth() {
+    const { data } = await supabase.auth.getSession();
+
+    if (!data.session) {
+      navigate("/admin-login");
+      return;
+    }
+
+    setCheckingAuth(false);
+  }
+
+  checkAuth();
+}, [navigate]);
+
+if (checkingAuth) {
+  return <div className="p-10">Kontrolujem prístup...</div>;
+}
+
+
+
+
+
+
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-900 p-8">

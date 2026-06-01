@@ -5,7 +5,7 @@ import { useToast } from "../context/ToastProvider";
 import { CustomDatePicker } from "../components/date";
 import ServiceSelect from "../components/ServiceSelect";
 import TimeSelect from '../components/TimeSelect'
-
+import { useNavigate } from "react-router-dom";
 const SERVICES = [
   {
     name: "Strih vlasov",
@@ -23,6 +23,8 @@ const SERVICES = [
     duration: 45,
   },
 ];
+
+
 
 const BREAK_MINUTES = 5;
 const TIME_STEP = 5;
@@ -279,43 +281,22 @@ async function handleSubmit() {
   }
 }
 
+
+const navigate = useNavigate();
+
   return (
-  <div className="min-h-[700px] h-fit overflow-x-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
-      {/* <header className="h-20 bg-white/80 backdrop-blur border-b">
-        <div className="h-full max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-xl">
-              ✂️
-            </div>
+  // <div className=" h-fit overflow-x-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
+    <div className=" min-h-[700px] md:min-h-screen flex w-full bg-amber-400">
+     
 
-            <div>
-              <h1 className="text-2xl font-bold">Rezervačný systém</h1>
-              <p className="text-sm text-slate-500">
-                Online booking pre služby
-              </p>
-            </div>
-          </div>
+<main className=" bg-pink-400 max-w-7xl mx-auto px-4 py-6 md:px-6 grid lg:grid-cols-[1fr_500px] gap-8 lg:gap-12 items-center">
 
-          <Link
-            to="/admin"
-            className="bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:bg-slate-800 shadow"
-          >
-            Admin →
-          </Link>
-        </div>
-      </header> */}
-
-
-        <section className=" bg-amber-200 h-fit">
+  
+        <section className=" bg-amber-200 h-fit flex flex-col">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold mb-5">
             ⚡ Rýchla online rezervácia
           </div>
-           <Link
-            to="/admin"
-            className="bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold hover:bg-slate-800 shadow"
-          >
-            Admin →
-          </Link>
+          
 
           <h2 className="text-5xl xl:text-6xl font-extrabold leading-tight mb-5">
             Rezervuj si termín jednoducho a rýchlo
@@ -325,7 +306,8 @@ async function handleSubmit() {
             Vyber službu, dátum, čas a potvrď rezerváciu za pár sekúnd.
           </p>
 
-          <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
+          <div
+           className="hidden bg-pink-300 md:grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
             <div className="bg-white/90 p-5 rounded-3xl shadow text-center sm:text-left">
               <div className="text-3xl mb-2">📅</div>
               <h3 className="font-bold">Dátum</h3>
@@ -344,7 +326,23 @@ async function handleSubmit() {
               <p className="text-sm text-slate-500">Potvrdené</p>
             </div>
           </div>
+
+
+<div className="h-fit w-full bg-green-400 mt-7">
+
+          <div
+  onClick={() => navigate("/admin")}
+  className="bg-slate-900 text-white px-5 py-3 rounded-2xl font-semibold shadow w-fit cursor-pointer"
+>
+  Admin →
+</div>
+</div>
+
+
+
+          
         </section>
+        
 
         <section className="bg-white/95 backdrop-blur rounded-[2rem] shadow-2xl p-6 border border-white max-h-[calc(100vh-120px)] ">
           <div className="mb-5">
@@ -449,7 +447,7 @@ async function handleSubmit() {
             </button>
           </div>
         </section>
-
+      </main>
     </div>
   );
 }
