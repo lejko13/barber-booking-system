@@ -292,7 +292,7 @@ const navigate = useNavigate();
 <main className=" bg-pink-400 max-w-7xl mx-auto px-4 py-6 md:px-6 grid lg:grid-cols-[1fr_500px] gap-8 lg:gap-12 items-center">
 
   
-        <section className=" bg-amber-200 h-fit flex flex-col">
+        {/* <section className=" bg-amber-200 h-fit flex flex-col">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold mb-5">
             ⚡ Rýchla online rezervácia
           </div>
@@ -341,7 +341,7 @@ const navigate = useNavigate();
 
 
           
-        </section>
+        </section> */}
         
 
         <section className="bg-white/95 backdrop-blur rounded-[2rem] shadow-2xl p-6 border border-white max-h-[calc(100vh-120px)] ">
