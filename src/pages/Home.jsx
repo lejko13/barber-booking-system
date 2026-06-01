@@ -306,7 +306,7 @@ async function handleSubmit() {
       </header> */}
 
 <main className="min-h-dvh max-w-7xl mx-auto px-4 py-6 md:px-6 grid lg:grid-cols-[1fr_500px] gap-8 lg:gap-12 items-center">
-        <section className="min-h-0 bg-amber-200 h-fit">
+        <section className=" bg-amber-200 h-fit">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold mb-5">
             ⚡ Rýchla online rezervácia
           </div>
