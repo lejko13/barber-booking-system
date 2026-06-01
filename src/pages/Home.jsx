@@ -286,7 +286,7 @@ const navigate = useNavigate();
 
   return (
   // <div className=" h-fit overflow-x-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
-    <div className=" min-h-[700px] md:min-h-screen flex w-full bg-amber-400">
+    <div className=" min-h-[700px] h-fit md:min-h-screen flex w-full bg-amber-400">
      
 
 <main className=" bg-pink-400 max-w-7xl mx-auto px-4 py-6 md:px-6 grid lg:grid-cols-[1fr_500px] gap-8 lg:gap-12 items-center">
