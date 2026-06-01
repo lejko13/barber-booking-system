@@ -280,7 +280,7 @@ async function handleSubmit() {
 }
 
   return (
-    <div className="h-screen max-h-screen flex justify-center items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
+    <div className="h-fit md:h-screen md:max-h-screen flex justify-center items-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-slate-900">
       {/* <header className="h-20 bg-white/80 backdrop-blur border-b">
         <div className="h-full max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3">
@@ -305,8 +305,8 @@ async function handleSubmit() {
         </div>
       </header> */}
 
-      <main className="h-[calc(100vh-80px)] max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_500px] gap-12 items-center">
-        <section className="min-h-0">
+      <main className=" bg-amber-900 h-fit md:h-[calc(100vh-80px)] max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_500px] gap-12 items-center">
+        <section className="min-h-0 bg-amber-200 h-fit">
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold mb-5">
             ⚡ Rýchla online rezervácia
           </div>
