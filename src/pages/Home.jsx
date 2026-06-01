@@ -344,7 +344,7 @@ const navigate = useNavigate();
         </section> */}
         
 
-        <section className="bg-white/95 backdrop-blur rounded-[2rem] shadow-2xl p-6 border border-white max-h-[calc(100vh-120px)] ">
+        <section className="bg-white/95 backdrop-blur rounded-[2rem] shadow-2xl p-6 border border-white h-fit ">
           <div className="mb-5">
             <p className="text-blue-600 font-semibold">Nový termín</p>
             <h3 className="text-3xl font-bold">Nová rezervácia</h3>
